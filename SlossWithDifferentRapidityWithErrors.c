@@ -8,26 +8,26 @@
    g5->SetTitle("S_{loss}(0<y<2.1)");
    g5->SetFillStyle(0);
  */
-  f1= new TGraphErrors("C:/root/0-0.3(WithErrors).txt");
+ f1= new TGraphErrors("C:/root/0-0.3(WithErrors).txt","%lg %lg %lg");
    f1->SetMarkerStyle(20);
     f1->SetMarkerColor(kRed);
    f1->SetTitle("S_{loss}(0<y<0.3)");
    f1->SetFillStyle(0);
    
-    f2= new TGraphErrors("C:/root/0.3-0.8(WithErrors).txt");
+   f2= new TGraphErrors("C:/root/0.3-0.8(WithErrors).txt","%lg %lg %lg");
     f2->SetMarkerStyle(20);
    f2->SetMarkerColor(kViolet);
    f2->SetTitle("S_{loss}(0.3<y<0.8)");
    f2->SetFillStyle(0);
   
  
-    f3= new TGraphErrors("C:/root/0.8-1.2(WithErrors).txt");
+   f3= new TGraphErrors("C:/root/0.8-1.2(WithErrors).txt","%lg %lg %lg");
    f3->SetMarkerStyle(20);
    f3->SetMarkerColor(kBlack);
   f3->SetFillStyle(0);
    f3->SetTitle("S_{loss}(0.8<y<1.2)");
  
-    f4= new TGraphErrors("C:/root/1.2-2.1(WithErrors).txt");
+   f4= new TGraphErrors("C:/root/1.2-2.1(WithErrors).txt","%lg %lg %lg");
      f4->SetMarkerStyle(20);
    f4->SetMarkerColor(kBlue);
   f4->SetFillStyle(0);
@@ -39,8 +39,8 @@
   mg->Add(f2,"AP");
   mg->Add(f3,"AP");
   mg->Add(f4,"AP");
-  mg->SetMinimum(-20);
-  mg->SetMaximum(20);
+  mg->SetMinimum(0);
+  mg->SetMaximum(0.3);
   
     mg->Draw("a");
    
